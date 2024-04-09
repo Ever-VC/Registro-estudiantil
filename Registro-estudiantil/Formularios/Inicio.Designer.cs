@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridView dgvRegistroAspirantes;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             gbInfoPersonal = new GroupBox();
             txtTelefono = new TextBox();
             lblTelefono = new Label();
@@ -62,44 +61,11 @@
             btnEliminar = new Button();
             btnActualizar = new Button();
             btnInscribir = new Button();
-            dgvRegistroAspirantes = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dgvRegistroAspirantes).BeginInit();
+            dgvAspirantes = new DataGridView();
             gbInfoPersonal.SuspendLayout();
             gbInfoAcademica.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvAspirantes).BeginInit();
             SuspendLayout();
-            // 
-            // dgvRegistroAspirantes
-            // 
-            dgvRegistroAspirantes.AllowUserToAddRows = false;
-            dgvRegistroAspirantes.AllowUserToDeleteRows = false;
-            dgvRegistroAspirantes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvRegistroAspirantes.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvRegistroAspirantes.BackgroundColor = Color.FromArgb(45, 66, 91);
-            dgvRegistroAspirantes.BorderStyle = BorderStyle.None;
-            dgvRegistroAspirantes.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvRegistroAspirantes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgvRegistroAspirantes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvRegistroAspirantes.GridColor = Color.SteelBlue;
-            dgvRegistroAspirantes.Location = new Point(364, 89);
-            dgvRegistroAspirantes.Name = "dgvRegistroAspirantes";
-            dgvRegistroAspirantes.ReadOnly = true;
-            dgvRegistroAspirantes.RowHeadersVisible = false;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(45, 66, 91);
-            dataGridViewCellStyle2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = Color.White;
-            dgvRegistroAspirantes.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            dgvRegistroAspirantes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvRegistroAspirantes.Size = new Size(661, 451);
-            dgvRegistroAspirantes.TabIndex = 4;
             // 
             // gbInfoPersonal
             // 
@@ -369,6 +335,7 @@
             btnGuardar.TabIndex = 2;
             btnGuardar.Text = "REGISTRAR";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // lblTitutloRegistro
             // 
@@ -440,16 +407,48 @@
             btnInscribir.Text = "    INSCRIBIR";
             btnInscribir.UseVisualStyleBackColor = true;
             // 
+            // dgvAspirantes
+            // 
+            dgvAspirantes.AllowUserToAddRows = false;
+            dgvAspirantes.AllowUserToDeleteRows = false;
+            dgvAspirantes.BackgroundColor = Color.FromArgb(45, 66, 91);
+            dgvAspirantes.BorderStyle = BorderStyle.None;
+            dgvAspirantes.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvAspirantes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvAspirantes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAspirantes.EnableHeadersVisualStyles = false;
+            dgvAspirantes.GridColor = Color.SteelBlue;
+            dgvAspirantes.Location = new Point(362, 91);
+            dgvAspirantes.Name = "dgvAspirantes";
+            dgvAspirantes.ReadOnly = true;
+            dgvAspirantes.RowHeadersVisible = false;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(45, 66, 91);
+            dataGridViewCellStyle2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dgvAspirantes.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dgvAspirantes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvAspirantes.Size = new Size(663, 449);
+            dgvAspirantes.TabIndex = 8;
+            // 
             // Inicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 41, 78);
-            ClientSize = new Size(1057, 692);
+            ClientSize = new Size(1097, 692);
+            Controls.Add(dgvAspirantes);
             Controls.Add(btnInscribir);
             Controls.Add(btnActualizar);
             Controls.Add(btnEliminar);
-            Controls.Add(dgvRegistroAspirantes);
             Controls.Add(lblTituloListado);
             Controls.Add(lblTitutloRegistro);
             Controls.Add(btnGuardar);
@@ -458,11 +457,11 @@
             Name = "Inicio";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Inicio";
-            ((System.ComponentModel.ISupportInitialize)dgvRegistroAspirantes).EndInit();
             gbInfoPersonal.ResumeLayout(false);
             gbInfoPersonal.PerformLayout();
             gbInfoAcademica.ResumeLayout(false);
             gbInfoAcademica.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvAspirantes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -495,10 +494,10 @@
         private TextBox txtPromedioIngles;
         private Button btnGuardar;
         private Label lblTitutloRegistro;
-        private DataGridView dgvRegistroAspirantes;
         private Label lblTituloListado;
         private Button btnEliminar;
         private Button btnActualizar;
         private Button btnInscribir;
+        private DataGridView dgvAspirantes;
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Registro_estudiantil.Clases
 {
-    public class Estudiante
+    public class Aspirante
     {
         //Atributos con sus respectivos metodos de acceso
         private int id;
@@ -82,7 +82,7 @@ namespace Registro_estudiantil.Clases
         }
 
         //Metodo constructor con parametros
-        public Estudiante(int id, string nombre, string apellido, int edad, string direccion, string dui, string telefono, Asignatura[] asignaturasCursadas, List<Asignatura> asignaturasInscritas)
+        public Aspirante(int id, string nombre, string apellido, int edad, string direccion, string dui, string telefono, Asignatura[] asignaturasCursadas, List<Asignatura> asignaturasInscritas)
         {
             this.id = id;
             this.nombre = nombre;
@@ -96,9 +96,9 @@ namespace Registro_estudiantil.Clases
         }
 
         //Metodo constructor sin parametros
-        public Estudiante()
+        public Aspirante()
         {
-            //Instanciamos el arreglo de asignaturas cursadas con 5 elementos que representan las 5 asignaturas basicas
+            //Instanciamos el arreglo de asignaturas cursadas con 5 elementos que representan las 5 asignaturas básicas
             asignaturasCursadas = [new Asignatura(), new Asignatura(), new Asignatura(), new Asignatura(), new Asignatura()];
 
             //Asignamos los nombres de las asignaturas basicas
