@@ -71,9 +71,9 @@
             lblNombre.ForeColor = Color.White;
             lblNombre.Location = new Point(56, 119);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(141, 17);
+            lblNombre.Size = new Size(140, 17);
             lblNombre.TabIndex = 1;
-            lblNombre.Text = "Nombre del aspitante:";
+            lblNombre.Text = "Nombre del aspirante:";
             // 
             // lblRendimientoAcademico
             // 
@@ -331,6 +331,7 @@
             Controls.Add(lblTitulo);
             Name = "Inscripcion";
             Text = "Inscripcion";
+            Load += Inscripcion_Load;
             gbInformacion.ResumeLayout(false);
             gbInformacion.PerformLayout();
             ResumeLayout(false);

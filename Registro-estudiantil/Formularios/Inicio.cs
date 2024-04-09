@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.Marshalling;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,12 +27,12 @@ namespace Registro_estudiantil.Formularios
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             //Almacenamos la informaci[on del aspirante
-            int id = 0;//Almacen el id del aspirante (segun la cantidad de registros en la lista)
+            int id = 1;//Almacen el id del aspirante (segun la cantidad de registros en la lista)
 
             //Validamos si la lista de aspirantes es nula
             if (lstRegistroAspirantes.Count > 0)
             {
-                id = lstRegistroAspirantes.Count;//Crea el id con la cantidad de elemento que hay en la lista
+                id = lstRegistroAspirantes.Count + 1;//Crea el id con la cantidad de elemento que hay en la lista
             }
 
             aspirante = new Aspirante
@@ -112,20 +113,53 @@ namespace Registro_estudiantil.Formularios
                 }
 
                 //Crea la nueva fila para el DataGridView
-                string[] row = new string[] { 
-                    aspirante.Id.ToString(), 
-                    aspirante.Nombre, 
-                    aspirante.Apellido, 
-                    aspirante.Edad.ToString(), 
-                    aspirante.Direccion, 
-                    aspirante.Dui, 
-                    aspirante.Telefono, 
-                    rendimientoAcademico.ToString(),
+                string[] row = new string[] {
+                    aspirante.Id.ToString(),
+                    aspirante.Nombre,
+                    aspirante.Apellido,
+                    aspirante.Edad.ToString(),
+                    aspirante.Direccion,
+                    aspirante.Dui,
+                    aspirante.Telefono,
+                    rendimientoAcademico.ToString("F2"),
                     asignaturasInscritas
                 };
 
                 dgvAspirantes.Rows.Add(row);
             }
+        }
+
+        private void btnInscribir_Click(object sender, EventArgs e)
+        {
+            //Verificamos el estado del label que debe contener el ID del aspirante si se ha hecho una selección
+            if (lblIdSeleccionado.Text != "ID SELECCIONADO")
+            {
+                this.Hide();//Oculta el formulario actual
+                int idAspirante = int.Parse(lblIdSeleccionado.Text);//Almacena el id del aspirante seleccionado
+                //El 'id' del aspirante seleccionado es la (posición - 1) en donde se encuentra
+                //dentro de la lista
+                Aspirante aspirante = lstRegistroAspirantes[idAspirante - 1];//Indicamos el 'id' a buscar (que es su posición - 1)
+
+                Inscripcion inscripcion = new Inscripcion();
+                inscripcion.setAspirante(aspirante);
+                inscripcion.Show();//Muestra el formulario de inscripción
+                inscripcion.FormClosed += Salir;//Se ejecuta cuando se cierra el nuevo formulario
+            }
+            else
+            {
+                MessageBox.Show("Por favor seleccione el aspirante al que le desea incribir asignaturas", "¡ATENCIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void dgvAspirantes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lblIdSeleccionado.Text = dgvAspirantes.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        private void Salir(Object sender, FormClosedEventArgs e)//Se ejecuta cuando se cierra el nuevo formulario
+        {
+            //limpiarTodo();
+            this.Show();//Muestra el formulario de de controlBoletos
         }
     }
 }

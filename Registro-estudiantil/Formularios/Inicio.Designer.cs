@@ -62,6 +62,7 @@
             btnActualizar = new Button();
             btnInscribir = new Button();
             dgvAspirantes = new DataGridView();
+            lblIdSeleccionado = new Label();
             gbInfoPersonal.SuspendLayout();
             gbInfoAcademica.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAspirantes).BeginInit();
@@ -341,7 +342,7 @@
             // 
             lblTitutloRegistro.AutoSize = true;
             lblTitutloRegistro.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitutloRegistro.ForeColor = Color.White;
+            lblTitutloRegistro.ForeColor = SystemColors.Window;
             lblTitutloRegistro.Location = new Point(68, 33);
             lblTitutloRegistro.Name = "lblTitutloRegistro";
             lblTitutloRegistro.Size = new Size(267, 25);
@@ -406,6 +407,7 @@
             btnInscribir.TabIndex = 7;
             btnInscribir.Text = "    INSCRIBIR";
             btnInscribir.UseVisualStyleBackColor = true;
+            btnInscribir.Click += btnInscribir_Click;
             // 
             // dgvAspirantes
             // 
@@ -438,6 +440,18 @@
             dgvAspirantes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvAspirantes.Size = new Size(663, 449);
             dgvAspirantes.TabIndex = 8;
+            dgvAspirantes.CellClick += dgvAspirantes_CellClick;
+            // 
+            // lblIdSeleccionado
+            // 
+            lblIdSeleccionado.AutoSize = true;
+            lblIdSeleccionado.Font = new Font("Century Gothic", 9.75F, FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
+            lblIdSeleccionado.ForeColor = Color.White;
+            lblIdSeleccionado.Location = new Point(898, 72);
+            lblIdSeleccionado.Name = "lblIdSeleccionado";
+            lblIdSeleccionado.Size = new Size(127, 16);
+            lblIdSeleccionado.TabIndex = 9;
+            lblIdSeleccionado.Text = "ID SELECCIONADO";
             // 
             // Inicio
             // 
@@ -445,6 +459,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 41, 78);
             ClientSize = new Size(1097, 692);
+            Controls.Add(lblIdSeleccionado);
             Controls.Add(dgvAspirantes);
             Controls.Add(btnInscribir);
             Controls.Add(btnActualizar);
@@ -499,5 +514,6 @@
         private Button btnActualizar;
         private Button btnInscribir;
         private DataGridView dgvAspirantes;
+        private Label lblIdSeleccionado;
     }
 }

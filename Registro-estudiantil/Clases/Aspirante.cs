@@ -121,5 +121,18 @@ namespace Registro_estudiantil.Clases
             this.telefono = "";
         }
 
+        public float CalcularRendimiento()
+        {
+            float sumaPromedios = 0;//Almacena la suma de los promedios de las asignaturas cursadas
+
+            for (int i = 0; i < asignaturasCursadas.Length; i++)
+            {
+                sumaPromedios += asignaturasCursadas[i].NotaPromedio;
+            }
+
+            //Calcula el rendimiento academico del aspirante (promedio de asignaturas cursadas)
+            return sumaPromedios / asignaturasCursadas.Length;
+        }
+
     }
 }
