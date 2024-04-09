@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Registro-estudiantil/1.0.0": {
+        "runtime": {
+          "Registro-estudiantil.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Registro-estudiantil/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
