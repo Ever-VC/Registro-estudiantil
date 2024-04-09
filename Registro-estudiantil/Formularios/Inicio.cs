@@ -125,7 +125,11 @@ namespace Registro_estudiantil.Formularios
                     asignaturasInscritas
                 };
 
+                //Agregga el registro del aspirante al DataGridView
                 dgvAspirantes.Rows.Add(row);
+
+                //Evita que cada vez que se actualice el dgv se muestre un registro como "seleccionado"
+                dgvAspirantes.ClearSelection();
             }
         }
 
