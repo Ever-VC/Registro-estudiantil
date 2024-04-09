@@ -4,5 +4,8 @@
     <Compile Update="Formularios\Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formularios\Inscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
