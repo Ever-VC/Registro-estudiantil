@@ -3,7 +3,6 @@ C:\Users\Ever Vásquez\Documents\Git_projects\Registro-estudiantil\Registro-estu
 C:\Users\Ever Vásquez\Documents\Git_projects\Registro-estudiantil\Registro-estudiantil\bin\Debug\net8.0-windows\Registro-estudiantil.runtimeconfig.json
 C:\Users\Ever Vásquez\Documents\Git_projects\Registro-estudiantil\Registro-estudiantil\bin\Debug\net8.0-windows\Registro-estudiantil.dll
 C:\Users\Ever Vásquez\Documents\Git_projects\Registro-estudiantil\Registro-estudiantil\bin\Debug\net8.0-windows\Registro-estudiantil.pdb
-C:\Users\Ever Vásquez\Documents\Git_projects\Registro-estudiantil\Registro-estudiantil\obj\Debug\net8.0-windows\Registro_estudiantil.Form1.resources
 C:\Users\Ever Vásquez\Documents\Git_projects\Registro-estudiantil\Registro-estudiantil\obj\Debug\net8.0-windows\Registro_estudiantil.Formularios.Inicio.resources
 C:\Users\Ever Vásquez\Documents\Git_projects\Registro-estudiantil\Registro-estudiantil\obj\Debug\net8.0-windows\Registro-estudiantil.csproj.GenerateResource.cache
 C:\Users\Ever Vásquez\Documents\Git_projects\Registro-estudiantil\Registro-estudiantil\obj\Debug\net8.0-windows\Registro-estudiantil.GeneratedMSBuildEditorConfig.editorconfig
@@ -15,3 +14,4 @@ C:\Users\Ever Vásquez\Documents\Git_projects\Registro-estudiantil\Registro-estu
 C:\Users\Ever Vásquez\Documents\Git_projects\Registro-estudiantil\Registro-estudiantil\obj\Debug\net8.0-windows\Registro-estudiantil.pdb
 C:\Users\Ever Vásquez\Documents\Git_projects\Registro-estudiantil\Registro-estudiantil\obj\Debug\net8.0-windows\Registro-estudiantil.genruntimeconfig.cache
 C:\Users\Ever Vásquez\Documents\Git_projects\Registro-estudiantil\Registro-estudiantil\obj\Debug\net8.0-windows\ref\Registro-estudiantil.dll
+C:\Users\Ever Vásquez\Documents\Git_projects\Registro-estudiantil\Registro-estudiantil\obj\Debug\net8.0-windows\Registro_estudiantil.Properties.Resources.resources
