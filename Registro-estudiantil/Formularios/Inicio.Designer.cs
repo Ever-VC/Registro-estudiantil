@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             gbInfoPersonal = new GroupBox();
             txtTelefono = new TextBox();
             lblTelefono = new Label();
@@ -354,7 +354,7 @@
             lblTituloListado.AutoSize = true;
             lblTituloListado.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTituloListado.ForeColor = Color.White;
-            lblTituloListado.Location = new Point(691, 33);
+            lblTituloListado.Location = new Point(643, 33);
             lblTituloListado.Name = "lblTituloListado";
             lblTituloListado.Size = new Size(254, 25);
             lblTituloListado.TabIndex = 3;
@@ -369,7 +369,7 @@
             btnEliminar.ForeColor = Color.White;
             btnEliminar.Image = (Image)resources.GetObject("btnEliminar.Image");
             btnEliminar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEliminar.Location = new Point(1094, 546);
+            btnEliminar.Location = new Point(1039, 546);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(106, 35);
             btnEliminar.TabIndex = 5;
@@ -385,7 +385,7 @@
             btnActualizar.ForeColor = Color.White;
             btnActualizar.Image = (Image)resources.GetObject("btnActualizar.Image");
             btnActualizar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnActualizar.Location = new Point(982, 546);
+            btnActualizar.Location = new Point(927, 546);
             btnActualizar.Name = "btnActualizar";
             btnActualizar.Size = new Size(106, 35);
             btnActualizar.TabIndex = 6;
@@ -401,7 +401,7 @@
             btnInscribir.ForeColor = Color.White;
             btnInscribir.Image = (Image)resources.GetObject("btnInscribir.Image");
             btnInscribir.ImageAlign = ContentAlignment.MiddleLeft;
-            btnInscribir.Location = new Point(870, 546);
+            btnInscribir.Location = new Point(815, 546);
             btnInscribir.Name = "btnInscribir";
             btnInscribir.Size = new Size(106, 35);
             btnInscribir.TabIndex = 7;
@@ -413,17 +413,19 @@
             // 
             dgvAspirantes.AllowUserToAddRows = false;
             dgvAspirantes.AllowUserToDeleteRows = false;
+            dgvAspirantes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvAspirantes.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvAspirantes.BackgroundColor = Color.FromArgb(45, 66, 91);
             dgvAspirantes.BorderStyle = BorderStyle.None;
             dgvAspirantes.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = SystemColors.HotTrack;
-            dataGridViewCellStyle3.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvAspirantes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvAspirantes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvAspirantes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvAspirantes.EnableHeadersVisualStyles = false;
             dgvAspirantes.GridColor = Color.SteelBlue;
@@ -431,14 +433,14 @@
             dgvAspirantes.Name = "dgvAspirantes";
             dgvAspirantes.ReadOnly = true;
             dgvAspirantes.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(45, 66, 91);
-            dataGridViewCellStyle4.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = Color.SteelBlue;
-            dataGridViewCellStyle4.SelectionForeColor = Color.White;
-            dgvAspirantes.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(45, 66, 91);
+            dataGridViewCellStyle2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dgvAspirantes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvAspirantes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvAspirantes.Size = new Size(838, 449);
+            dgvAspirantes.Size = new Size(783, 449);
             dgvAspirantes.TabIndex = 8;
             dgvAspirantes.CellClick += dgvAspirantes_CellClick;
             // 
@@ -447,7 +449,7 @@
             lblIdSeleccionado.AutoSize = true;
             lblIdSeleccionado.Font = new Font("Century Gothic", 9.75F, FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
             lblIdSeleccionado.ForeColor = Color.White;
-            lblIdSeleccionado.Location = new Point(1073, 72);
+            lblIdSeleccionado.Location = new Point(1018, 72);
             lblIdSeleccionado.Name = "lblIdSeleccionado";
             lblIdSeleccionado.Size = new Size(127, 16);
             lblIdSeleccionado.TabIndex = 9;
@@ -459,7 +461,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 41, 78);
-            ClientSize = new Size(1223, 692);
+            ClientSize = new Size(1207, 692);
             Controls.Add(lblIdSeleccionado);
             Controls.Add(dgvAspirantes);
             Controls.Add(btnInscribir);

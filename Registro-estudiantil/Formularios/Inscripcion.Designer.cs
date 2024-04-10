@@ -50,7 +50,9 @@
             chkIngeEco = new CheckBox();
             btnInscribir = new Button();
             gbInformacion = new GroupBox();
+            gbAsignaturas = new GroupBox();
             gbInformacion.SuspendLayout();
+            gbAsignaturas.SuspendLayout();
             SuspendLayout();
             // 
             // lblTitulo
@@ -199,86 +201,100 @@
             // chkIntroInformatica
             // 
             chkIntroInformatica.AutoSize = true;
+            chkIntroInformatica.Cursor = Cursors.Hand;
             chkIntroInformatica.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             chkIntroInformatica.ForeColor = Color.White;
-            chkIntroInformatica.Location = new Point(114, 414);
+            chkIntroInformatica.Location = new Point(20, 32);
             chkIntroInformatica.Name = "chkIntroInformatica";
             chkIntroInformatica.Size = new Size(200, 21);
             chkIntroInformatica.TabIndex = 2;
             chkIntroInformatica.Text = "Introducción a la Informática";
             chkIntroInformatica.UseVisualStyleBackColor = true;
+            chkIntroInformatica.CheckedChanged += chkIntroInformatica_CheckedChanged;
             // 
             // chkMate1
             // 
             chkMate1.AutoSize = true;
+            chkMate1.Cursor = Cursors.Hand;
             chkMate1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             chkMate1.ForeColor = Color.White;
-            chkMate1.Location = new Point(114, 441);
+            chkMate1.Location = new Point(20, 59);
             chkMate1.Name = "chkMate1";
             chkMate1.Size = new Size(113, 21);
             chkMate1.TabIndex = 2;
             chkMate1.Text = "Matemáticas I";
             chkMate1.UseVisualStyleBackColor = true;
+            chkMate1.CheckedChanged += chkMate1_CheckedChanged;
             // 
             // chkPsicologiaSocial
             // 
             chkPsicologiaSocial.AutoSize = true;
+            chkPsicologiaSocial.Cursor = Cursors.Hand;
             chkPsicologiaSocial.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             chkPsicologiaSocial.ForeColor = Color.White;
-            chkPsicologiaSocial.Location = new Point(114, 468);
+            chkPsicologiaSocial.Location = new Point(20, 86);
             chkPsicologiaSocial.Name = "chkPsicologiaSocial";
             chkPsicologiaSocial.Size = new Size(128, 21);
             chkPsicologiaSocial.TabIndex = 2;
             chkPsicologiaSocial.Text = "Psicología Social";
             chkPsicologiaSocial.UseVisualStyleBackColor = true;
+            chkPsicologiaSocial.CheckedChanged += chkPsicologiaSocial_CheckedChanged;
             // 
             // chkFisica1
             // 
             chkFisica1.AutoSize = true;
+            chkFisica1.Cursor = Cursors.Hand;
             chkFisica1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             chkFisica1.ForeColor = Color.White;
-            chkFisica1.Location = new Point(114, 495);
+            chkFisica1.Location = new Point(20, 113);
             chkFisica1.Name = "chkFisica1";
             chkFisica1.Size = new Size(66, 21);
             chkFisica1.TabIndex = 2;
             chkFisica1.Text = "Física I";
             chkFisica1.UseVisualStyleBackColor = true;
+            chkFisica1.CheckedChanged += chkFisica1_CheckedChanged;
             // 
             // chkProba
             // 
             chkProba.AutoSize = true;
+            chkProba.Cursor = Cursors.Hand;
             chkProba.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             chkProba.ForeColor = Color.White;
-            chkProba.Location = new Point(114, 522);
+            chkProba.Location = new Point(20, 140);
             chkProba.Name = "chkProba";
             chkProba.Size = new Size(179, 21);
             chkProba.TabIndex = 2;
             chkProba.Text = "Probabilidad y Estadística";
             chkProba.UseVisualStyleBackColor = true;
+            chkProba.CheckedChanged += chkProba_CheckedChanged;
             // 
             // chkIngles
             // 
             chkIngles.AutoSize = true;
+            chkIngles.Cursor = Cursors.Hand;
             chkIngles.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             chkIngles.ForeColor = Color.White;
-            chkIngles.Location = new Point(114, 549);
+            chkIngles.Location = new Point(20, 167);
             chkIngles.Name = "chkIngles";
             chkIngles.Size = new Size(61, 21);
             chkIngles.TabIndex = 2;
             chkIngles.Text = "Inglés";
             chkIngles.UseVisualStyleBackColor = true;
+            chkIngles.CheckedChanged += chkIngles_CheckedChanged;
             // 
             // chkIngeEco
             // 
             chkIngeEco.AutoSize = true;
+            chkIngeEco.Cursor = Cursors.Hand;
             chkIngeEco.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             chkIngeEco.ForeColor = Color.White;
-            chkIngeEco.Location = new Point(114, 576);
+            chkIngeEco.Location = new Point(20, 194);
             chkIngeEco.Name = "chkIngeEco";
             chkIngeEco.Size = new Size(156, 21);
             chkIngeEco.TabIndex = 2;
             chkIngeEco.Text = "Ingeniería Económica";
             chkIngeEco.UseVisualStyleBackColor = true;
+            chkIngeEco.CheckedChanged += chkIngeEco_CheckedChanged;
             // 
             // btnInscribir
             // 
@@ -286,12 +302,13 @@
             btnInscribir.FlatAppearance.MouseOverBackColor = Color.Teal;
             btnInscribir.FlatStyle = FlatStyle.Flat;
             btnInscribir.ForeColor = Color.White;
-            btnInscribir.Location = new Point(114, 617);
+            btnInscribir.Location = new Point(118, 632);
             btnInscribir.Name = "btnInscribir";
             btnInscribir.Size = new Size(179, 42);
             btnInscribir.TabIndex = 3;
             btnInscribir.Text = "INSCRIBIR";
             btnInscribir.UseVisualStyleBackColor = true;
+            btnInscribir.Click += btnInscribir_Click;
             // 
             // gbInformacion
             // 
@@ -309,31 +326,47 @@
             gbInformacion.TabIndex = 4;
             gbInformacion.TabStop = false;
             // 
+            // gbAsignaturas
+            // 
+            gbAsignaturas.Controls.Add(chkIntroInformatica);
+            gbAsignaturas.Controls.Add(chkMate1);
+            gbAsignaturas.Controls.Add(chkPsicologiaSocial);
+            gbAsignaturas.Controls.Add(chkIngeEco);
+            gbAsignaturas.Controls.Add(chkFisica1);
+            gbAsignaturas.Controls.Add(chkIngles);
+            gbAsignaturas.Controls.Add(chkProba);
+            gbAsignaturas.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            gbAsignaturas.ForeColor = Color.White;
+            gbAsignaturas.Location = new Point(98, 391);
+            gbAsignaturas.Name = "gbAsignaturas";
+            gbAsignaturas.Size = new Size(228, 235);
+            gbAsignaturas.TabIndex = 5;
+            gbAsignaturas.TabStop = false;
+            gbAsignaturas.Text = "ASIGNATURAS";
+            // 
             // Inscripcion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 41, 78);
-            ClientSize = new Size(427, 686);
+            ClientSize = new Size(426, 686);
+            Controls.Add(gbAsignaturas);
             Controls.Add(gbInformacion);
             Controls.Add(btnInscribir);
-            Controls.Add(chkIngeEco);
-            Controls.Add(chkIngles);
-            Controls.Add(chkProba);
-            Controls.Add(chkFisica1);
-            Controls.Add(chkPsicologiaSocial);
-            Controls.Add(chkMate1);
-            Controls.Add(chkIntroInformatica);
             Controls.Add(lblRendimientoAcademico);
             Controls.Add(lblRendimientoAspirante);
             Controls.Add(lblNombreAspirante);
             Controls.Add(lblNombre);
             Controls.Add(lblTitulo);
             Name = "Inscripcion";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Inscripcion";
+            FormClosed += Inscripcion_FormClosed;
             Load += Inscripcion_Load;
             gbInformacion.ResumeLayout(false);
             gbInformacion.PerformLayout();
+            gbAsignaturas.ResumeLayout(false);
+            gbAsignaturas.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -362,5 +395,6 @@
         private CheckBox chkIngeEco;
         private Button btnInscribir;
         private GroupBox gbInformacion;
+        private GroupBox gbAsignaturas;
     }
 }

@@ -76,7 +76,6 @@ namespace Registro_estudiantil.Formularios
             dgvAspirantes.Columns.Add("rendimientoAcademico", "Promedio");
             dgvAspirantes.Columns.Add("asignaturasInscritas", "Asignaturas Inscritas");
 
-
             foreach (Aspirante aspirante in lstRegistroAspirantes)
             {
                 float sumaPromedios = 0;//Almacena la suma de los promedios de las asignaturas cursadas
@@ -113,7 +112,7 @@ namespace Registro_estudiantil.Formularios
                 }
 
                 //Crea la nueva fila para el DataGridView
-                string[] row = new string[] {
+                string[] row = [
                     aspirante.Id.ToString(),
                     aspirante.Nombre,
                     aspirante.Apellido,
@@ -123,7 +122,7 @@ namespace Registro_estudiantil.Formularios
                     aspirante.Telefono,
                     rendimientoAcademico.ToString("F2"),
                     asignaturasInscritas
-                };
+                ];
 
                 //Agregga el registro del aspirante al DataGridView
                 dgvAspirantes.Rows.Add(row);
@@ -147,6 +146,7 @@ namespace Registro_estudiantil.Formularios
                 Inscripcion inscripcion = new Inscripcion();
                 inscripcion.setAspirante(aspirante);
                 inscripcion.Show();//Muestra el formulario de inscripción
+                inscripcion.AspiranteInscrito += ActualizarAspirante;//Se ejecuta cuando se inscribe un aspirante
                 inscripcion.FormClosed += Salir;//Se ejecuta cuando se cierra el nuevo formulario
             }
             else
@@ -160,10 +160,16 @@ namespace Registro_estudiantil.Formularios
             lblIdSeleccionado.Text = dgvAspirantes.CurrentRow.Cells[0].Value.ToString();
         }
 
+        private void ActualizarAspirante(object sender, AspiranteEventArgs e)
+        {
+            //Actualiza el aspirante en la lista
+            lstRegistroAspirantes[e.Aspirante.Id - 1] = e.Aspirante;
+            ActualizarDataGrid();//Actualiza el DataGridView para mostrar los cambios
+        }
+
         private void Salir(Object sender, FormClosedEventArgs e)//Se ejecuta cuando se cierra el nuevo formulario
         {
-            //limpiarTodo();
-            this.Show();//Muestra el formulario de de controlBoletos
+            this.Show();//Muestra el formulario principal
         }
     }
 }
