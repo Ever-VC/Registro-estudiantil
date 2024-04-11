@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
@@ -63,9 +64,11 @@
             btnInscribir = new Button();
             dgvAspirantes = new DataGridView();
             lblIdSeleccionado = new Label();
+            errpValidar = new ErrorProvider(components);
             gbInfoPersonal.SuspendLayout();
             gbInfoAcademica.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAspirantes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errpValidar).BeginInit();
             SuspendLayout();
             // 
             // gbInfoPersonal
@@ -98,6 +101,7 @@
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(100, 22);
             txtTelefono.TabIndex = 6;
+            txtTelefono.KeyPress += txtTelefono_KeyPress;
             // 
             // lblTelefono
             // 
@@ -136,6 +140,7 @@
             txtDireccion.Name = "txtDireccion";
             txtDireccion.Size = new Size(100, 22);
             txtDireccion.TabIndex = 4;
+            txtDireccion.KeyPress += txtDireccion_KeyPress;
             // 
             // lblDui
             // 
@@ -155,6 +160,7 @@
             txtEdad.Name = "txtEdad";
             txtEdad.Size = new Size(100, 22);
             txtEdad.TabIndex = 3;
+            txtEdad.KeyPress += txtEdad_KeyPress;
             // 
             // lblApellido
             // 
@@ -174,6 +180,7 @@
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(100, 22);
             txtApellido.TabIndex = 2;
+            txtApellido.KeyPress += txtApellido_KeyPress;
             // 
             // lblDireccion
             // 
@@ -193,6 +200,7 @@
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(100, 22);
             txtNombre.TabIndex = 1;
+            txtNombre.KeyPress += txtNombre_KeyPress;
             // 
             // lblEdad
             // 
@@ -233,6 +241,7 @@
             txtPromedioIngles.Name = "txtPromedioIngles";
             txtPromedioIngles.Size = new Size(42, 22);
             txtPromedioIngles.TabIndex = 6;
+            txtPromedioIngles.KeyPress += txtPromedioIngles_KeyPress;
             // 
             // lblPromedioIngles
             // 
@@ -252,6 +261,7 @@
             txtPromedioCiencias.Name = "txtPromedioCiencias";
             txtPromedioCiencias.Size = new Size(42, 22);
             txtPromedioCiencias.TabIndex = 5;
+            txtPromedioCiencias.KeyPress += txtPromedioCiencias_KeyPress;
             // 
             // lblPromedioLenguaje
             // 
@@ -271,6 +281,7 @@
             txtPromedioSociales.Name = "txtPromedioSociales";
             txtPromedioSociales.Size = new Size(42, 22);
             txtPromedioSociales.TabIndex = 4;
+            txtPromedioSociales.KeyPress += txtPromedioSociales_KeyPress;
             // 
             // lblPromedioCiencias
             // 
@@ -290,6 +301,7 @@
             txtPromedioMatematica.Name = "txtPromedioMatematica";
             txtPromedioMatematica.Size = new Size(42, 22);
             txtPromedioMatematica.TabIndex = 3;
+            txtPromedioMatematica.KeyPress += txtPromedioMatematica_KeyPress;
             // 
             // lblPromedioMatematica
             // 
@@ -309,6 +321,7 @@
             txtPromedioLenguaje.Name = "txtPromedioLenguaje";
             txtPromedioLenguaje.Size = new Size(42, 22);
             txtPromedioLenguaje.TabIndex = 2;
+            txtPromedioLenguaje.KeyPress += txtPromedioLenguaje_KeyPress;
             // 
             // lblPromedioSociales
             // 
@@ -391,6 +404,7 @@
             btnActualizar.TabIndex = 6;
             btnActualizar.Text = "   ACTUALIZAR";
             btnActualizar.UseVisualStyleBackColor = true;
+            btnActualizar.Click += btnActualizar_Click;
             // 
             // btnInscribir
             // 
@@ -456,6 +470,10 @@
             lblIdSeleccionado.Text = "ID SELECCIONADO";
             lblIdSeleccionado.Visible = false;
             // 
+            // errpValidar
+            // 
+            errpValidar.ContainerControl = this;
+            // 
             // Inicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -480,6 +498,7 @@
             gbInfoAcademica.ResumeLayout(false);
             gbInfoAcademica.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAspirantes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errpValidar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -518,5 +537,6 @@
         private Button btnInscribir;
         private DataGridView dgvAspirantes;
         private Label lblIdSeleccionado;
+        private ErrorProvider errpValidar;
     }
 }
